@@ -1,12 +1,38 @@
-# React + Vite
+# 🛍️ Euphoria - Clothing Store Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive e-commerce clothing store built with **React**.  
+This project is based on the [Euphoria Figma Template](https://www.figma.com/design/UkNO4CJYP1FxPCMeNR7MwQ/Euphoria---Ecommerce--Apparels--Website-Template--Community-?node-id=0-1&m=dev).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Responsive UI with modern design
+- Product listing and detail pages
+- Add to cart functionality
+- Shopping cart management
+- User login and registration (planned)
+- Built with React, React Router, and Context API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- React
+- JavaScript (ES6+)
+- React Router
+- Context API
+- CSS / Tailwind CSS *(or your choice of styling)*
+
+---
+
+## 📁 Folder Structure (after setup)
+
+```bash
+src/
+│
+├── components/
+├── pages/
+├── context/
+├── assets/
+└── App.js
