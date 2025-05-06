@@ -30,9 +30,15 @@ This project is based on the [Euphoria Figma Template](https://www.figma.com/des
 
 ```bash
 src/
-│
-├── components/
-├── pages/
-├── context/
-├── assets/
-└── App.js
+├── assets/ # Static files like images, fonts, etc.
+├── components/ # Reusable UI components
+│ └── Header/ # Header section and its subcomponents
+│ ├── Header.jsx
+│ ├── Logo.jsx
+│ ├── NavMenu.jsx
+│ ├── SearchBar.jsx
+│ ├── UserActions.jsx
+├── pages/ # Application pages like Home, Shop, etc.
+├── App.jsx # Root component
+├── main.jsx # Application entry point
+└── index.css # Main CSS file (e.g., Tailwind config)
