@@ -1,7 +1,6 @@
 const NavLinks = () => {
     return (
       <>
-        <h1 className="">Welcome to website FitLand!</h1>
         <nav className="hidden md:flex gap-6 font-medium text-gray-600">
           <a href="#" className="hover:text-black">Home</a>
           <a href="#" className="hover:text-black">Shop</a>

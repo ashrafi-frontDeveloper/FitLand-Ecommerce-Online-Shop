@@ -1,5 +1,25 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(../src/assets/fonts/Vazirmatn-Bold.ttf);
+  /* font-weight: 700; */
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(../src/assets/fonts/Vazirmatn-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(../src/assets/fonts/Vazirmatn-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(../src/assets/fonts/Vazirmatn-Light.ttf);
+  font-weight: 300;
+}
 
 
 @theme {
@@ -11,7 +31,8 @@
     --color-secondaryBack: #EBF5FF;
 
     /* Font Family Custom */
-    @theme {
-        --font-vazir: "Vazirmatn", sans-serif;
-      }
+    --font-vazirB: Vazirmatn , "sans-serif";
+    --font-vazirR: Vazirmatn , "sans-serif";
+    --font-vazirM: Vazirmatn , "sans-serif";
+    --font-vazirL: Vazirmatn , "sans-serif";
 }
