@@ -1,6 +1,7 @@
-import Logo from "../Logo";
-import NavLinks from "../NavLinks";
-import UserActions from "../UserActions";
+import Logo from "./Logo";
+import NavLinks from "./NavLinks";
+import UserActions from "./UserActions";
+
 
 const Header = () => {
   return (

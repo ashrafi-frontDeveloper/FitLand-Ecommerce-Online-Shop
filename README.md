@@ -10,15 +10,21 @@ An e-commerce web application for selling sports equipment and apparel, based on
 - Vite (or CRA)
 
 ## 📁 Project Structure
-
+```
 src/
 ├── assets/
 ├── components/
+│   ├── Header
+    │   ├── Header.jsx
+    │   ├── Logo.jsx
+    │   ├── NavLinks.jsx
+    │   └── UserActions.jsx
 ├── pages/
 ├── layout/
 ├── routes/
 ├── utils/
 
+```
 
 ## 📌 Features
 
