@@ -1,1 +1,17 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+
+@theme {
+    /* Color coustom */
+    --color-primary: #FA541C;
+    --color-secondary: #032340;
+    --color-background: #FFFFFF;
+    --color-primaryBack : #FEEEE8;
+    --color-secondaryBack: #EBF5FF;
+
+    /* Font Family Custom */
+    @theme {
+        --font-vazir: "Vazirmatn", sans-serif;
+      }
+}
