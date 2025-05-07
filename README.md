@@ -1,44 +1,35 @@
-# 🛍️ Euphoria - Clothing Store Website
+# 🏋️‍♂️ FitLand - Sports Equipment Ecommerce Website
 
-A modern and responsive e-commerce clothing store built with **React**.  
-This project is based on the [Euphoria Figma Template](https://www.figma.com/design/UkNO4CJYP1FxPCMeNR7MwQ/Euphoria---Ecommerce--Apparels--Website-Template--Community-?node-id=0-1&m=dev).
+An e-commerce web application for selling sports equipment and apparel, based on a modern Figma UI/UX design.
 
----
-
-## 🚀 Features
-
-- Responsive UI with modern design
-- Product listing and detail pages
-- Add to cart functionality
-- Shopping cart management
-- User login and registration (planned)
-- Built with React, React Router, and Context API
-
----
-
-## 🛠️ Tech Stack
+## 🔧 Tech Stack
 
 - React
-- JavaScript (ES6+)
+- Tailwind CSS
 - React Router
-- Context API
-- CSS / Tailwind CSS *(or your choice of styling)*
+- Vite (or CRA)
 
----
+## 📁 Project Structure
 
-## 📁 Folder Structure (after setup)
-
-```bash
 src/
-├── assets/ # Static files like images, fonts, etc.
-├── components/ # Reusable UI components
-│ └── Header/ # Header section and its subcomponents
-│ ├── Header.jsx
-│ ├── Logo.jsx
-│ ├── NavMenu.jsx
-│ ├── SearchBar.jsx
-│ ├── UserActions.jsx
-├── pages/ # Application pages like Home, Shop, etc.
-├── App.jsx # Root component
-├── main.jsx # Application entry point
-└── index.css # Main CSS file (e.g., Tailwind config)
+├── assets/
+├── components/
+├── pages/
+├── layout/
+├── routes/
+├── utils/
+
+
+## 📌 Features
+
+- Fully responsive
+- Home, Shop, Product Detail, Cart, Checkout pages
+- Dynamic product cards
+- Filter and search
+- Add to cart and cart preview
+
+## 🔜 In Progress
+
+- Product filtering by category
+- Authentication
+- Payment integration
