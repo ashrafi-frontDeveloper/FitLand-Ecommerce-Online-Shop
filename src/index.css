@@ -36,3 +36,12 @@
     --font-vazirM: Vazirmatn , "sans-serif";
     --font-vazirL: Vazirmatn , "sans-serif";
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  font-family: "Vazirmatn";
+}
