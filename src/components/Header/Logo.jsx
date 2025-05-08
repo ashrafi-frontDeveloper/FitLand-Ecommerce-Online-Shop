@@ -1,7 +1,7 @@
 // import React from 'react'
 const Logo = () => {
     return (
-      <div className="flex flex-col gap-y-2 text-end text-2xl font-bold text-gray-800">
+      <div className="flex flex-col gap-y-2 text-start text-2xl font-bold text-gray-800">
       <svg xmlns="http://www.w3.org/2000/svg" width="151" height="32" viewBox="0 0 151 32" fill="none">
             <g clip-path="url(#clip0_7223_15625)">
             <path d="M9.07969 11.5071V16.1348H20.0172V22.9902H9.07969V31.6179H0.242188V4.66406H21.5547V11.5071H9.07969Z" fill="#FA541C"/>
