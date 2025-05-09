@@ -27,7 +27,7 @@ const MainHeader = () => {
                 {/* section left => information */}
                 <div className="flex flex-col gap-y-6 mt-20 mr-20">
                     <div className="flex items-center gap-x-4">
-                        <div className="bg-[#EBF5FF] w-20 h-20 rounded-2xl flex items-center justify-center">
+                        <div className="bg-[#EBF5FF] w-20 h-20 rounded-2xl flex items-center justify-center hover:shadow-[0_4px_14px_rgba(0,0,0,0.1),0_-4px_16px_rgba(0,0,0,0.1),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] transition-all duration-350">
                             <IoStorefrontOutline className=" text-secondary w-10 h-10" />
                         </div>
                         <div className="flex flex-col font-vazirB font-medium">
@@ -36,7 +36,7 @@ const MainHeader = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-x-4">
-                        <div className="bg-[#EBF5FF] w-20 h-20 rounded-2xl flex items-center justify-center">
+                        <div className="bg-[#EBF5FF] w-20 h-20 rounded-2xl flex items-center justify-center hover:shadow-[0_4px_14px_rgba(0,0,0,0.1),0_-4px_16px_rgba(0,0,0,0.1),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] transition-all duration-350">
                             <AiOutlineLike className=" text-secondary w-10 h-10" />
                         </div>
                         <div className="flex flex-col font-vazirB font-medium">
@@ -45,7 +45,7 @@ const MainHeader = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-x-4">
-                        <div className="bg-[#EBF5FF] w-20 h-20 rounded-2xl flex items-center justify-center">
+                        <div className="bg-[#EBF5FF] w-20 h-20 rounded-2xl flex items-center justify-center hover:shadow-[0_4px_14px_rgba(0,0,0,0.1),0_-4px_16px_rgba(0,0,0,0.1),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] transition-all duration-350">
                             <IoCalendarNumberOutline className=" text-secondary w-10 h-10" />
                         </div>
                         <div className="flex flex-col font-vazirB font-medium">
