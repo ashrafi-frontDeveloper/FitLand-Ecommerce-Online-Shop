@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import UserActions from "./UserActions";
+import MainHeader from "./MainHeader";
 
 
 const Header = () => {
@@ -18,6 +19,7 @@ const Header = () => {
         {/* menu */}
         <div className="px-10 py-5 mt-9">
           <NavLinks />
+          <MainHeader />
         </div>
       </header>
     </>
