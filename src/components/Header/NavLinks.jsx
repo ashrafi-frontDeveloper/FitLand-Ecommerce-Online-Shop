@@ -1,12 +1,18 @@
 export const RightMenu = () => {
+  const menuItems = ['مردانه', 'زنانه', 'بچگانه' , 'لوازم ورزشی' , 'شیکر و جاگ']
   return (
-        <div className="hidden md:flex gap-x-10 text-gray-600 text-base font-vazirB font-bold">
-          <a href="#" className=" transition-all duration-300 hover:text-secondary">مردانه</a>
-          <a href="#" className=" transition-all duration-300 hover:text-secondary">زنانه</a>
-          <a href="#" className=" transition-all duration-300 hover:text-secondary">بچگانه</a>
-          <a href="#" className=" transition-all duration-300 hover:text-secondary">لوازم ورزشی</a>
-          <a href="#" className=" transition-all duration-300 hover:text-secondary">شیکر و جاگ</a>
-        </div>
+    <>
+        <ul className="hidden md:flex gap-x-10 text-gray-600 text-base font-vazirB font-bold">
+          {
+              menuItems.map((item, index) => (
+                  <li key={index}>
+                    <a href="#" className="transition-all duration-300 hover:text-secondary">{item}</a>
+                  </li>
+              ))
+          }
+
+        </ul>
+    </>
   )
 }
 
