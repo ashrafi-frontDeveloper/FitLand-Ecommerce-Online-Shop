@@ -6,9 +6,9 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 const UserActions = () => {
   
     return (
-      <div className="flex items-center gap-x-20 2xl:gap-x-40 gap-4 text-gray-600 text-lg">
+      <div className="flex items-center gap-x-5 lg:gap-x-10 xl:gap-x-20 2xl:gap-x-40 gap-y-16 text-gray-600 text-lg">
         {/* search box */}
-        <form className="flex items-center gap-x-2 text-start border border-gray-300 px-3 py-4 rounded-2xl w-[638px] h-12 bg-[#F9F9F9]" action="">
+        <form className="flex items-center gap-x-2 text-start border border-gray-300 px-0 xl:px-3 py-4 rounded-2xl w-72 lg:w-96 xl:w-[638px] h-12 bg-[#F9F9F9]" action="">
           <CiSearch className="w-6 h-6 text-primary" />
           <input className="border-none outline-none" type="text" name="" placeholder="جستجو"/>
         </form>

@@ -20,9 +20,8 @@ const MainHeader = () => {
                     </button>
                 </div>
                 {/* section center => image */}
-                <div className="mt-5">
-                    <img src="images/running man.png" alt="" className=" relative" />
-                    <img src="images/bottom runninig.png" alt="" className=" absolute" />
+                <div className="mt-5 relative">
+                    <img src="images/running man.png" alt="" className="" />
                 </div>
                 {/* section left => information */}
                 <div className="flex flex-col gap-y-6 mt-20 mr-20">
