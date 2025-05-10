@@ -17,7 +17,7 @@ const Header = () => {
           <UserActions />
         </div>
         {/* menu */}
-        <div className="px-10 py-5 mt-9">
+        <div className="px-5 lg:px-10 py-5 mt-9">
           <NavLinks />
           <MainHeader />
         </div>
