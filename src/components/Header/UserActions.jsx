@@ -21,7 +21,7 @@ const UserActions = () => {
           </button>
 
           {/* shopping cart */}
-          <button className=" relative w-12 h-12 flex items-center cursor-pointer justify-center rounded-xl bg-primary text-white hover:shadow-[0_4px_14px_rgba(0,0,0,0.1),0_-4px_16px_rgba(0,0,0,0.1),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] transition-all duration-350">
+          <button className="z-40 relative w-12 h-12 flex items-center cursor-pointer justify-center rounded-xl bg-primary text-white hover:shadow-[0_4px_14px_rgba(0,0,0,0.1),0_-4px_16px_rgba(0,0,0,0.1),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] transition-all duration-350">
             <HiOutlineShoppingBag />
             <span className=" absolute -top-1 -left-1 w-4 h-4 bg-secondary text-sm rounded-full">
               {toPersianDigits(0)}

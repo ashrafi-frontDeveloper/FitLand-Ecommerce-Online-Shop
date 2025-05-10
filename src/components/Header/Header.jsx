@@ -7,7 +7,7 @@ import MainHeader from "./MainHeader";
 const Header = () => {
   return (
     <>
-      <div className="fixed flex items-center justify-center h-10 w-full font-vazirB font-medium text-sm text-white bg-secondary">
+      <div className="z-50 fixed flex items-center justify-center h-10 w-full font-vazirB font-medium text-sm text-white bg-secondary">
         <a href="#">:) با عضویت در فیت لند اولین ارسال را مهمون ما باش</a>
       </div>
       <header className="container px-0 xl:px-4 p-0 2xl:px-10 pt-12 mx-auto w-full">

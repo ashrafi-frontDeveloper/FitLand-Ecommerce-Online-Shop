@@ -20,7 +20,7 @@ const MainHeader = () => {
                     </button>
                 </div>
                 {/* section center => image */}
-                <div className="mt-5 relative">
+                <div className="mt-5 relative z-40">
                     <img src="/public/images/run.png" alt="" className="w-96 xl:w[422px] h-96 xl:h-[475px]" />
                 </div>
                 {/* section left => information */}
