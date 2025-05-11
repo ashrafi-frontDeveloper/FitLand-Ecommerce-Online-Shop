@@ -18,7 +18,9 @@ src/
     │   ├── Header.jsx
     │   ├── Logo.jsx
     │   ├── NavLinks.jsx
-    │   └── UserActions.jsx
+    │   └── UserActions.jsx 
+    │   └── MainHeader.jsx
+    │   └── MobileMenu.jsx
 ├── pages/
 ├── layout/
 ├── routes/
