@@ -22,8 +22,8 @@ const Logo = () => {
               </clipPath>
               </defs>
         </svg>
-      <span className="font-vazirB font-medium text-[12px] text-gray-400">فروشگاه لوازم ورزشی فیت‌لند</span>
-    </div>
+        <span className="font-vazirB font-medium text-[12px] text-gray-400">فروشگاه لوازم ورزشی فیت‌لند</span>
+      </div>
     )
   }
   

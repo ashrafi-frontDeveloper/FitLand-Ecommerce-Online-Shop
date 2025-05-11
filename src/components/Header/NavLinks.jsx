@@ -43,7 +43,7 @@ export const LeftMenu = () => {
 const NavLinks = () => {
     return (
       <>
-        <nav className="flex items-center justify-between bg-Neutral rounded-2xl px-5 lg:px-10 py-5">
+        <nav className="hidden md:flex items-center justify-between bg-Neutral rounded-2xl px-5 lg:px-10 py-5">
           <RightMenu />
           <LeftMenu />
         </nav>
