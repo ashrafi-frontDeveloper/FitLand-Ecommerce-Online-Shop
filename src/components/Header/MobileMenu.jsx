@@ -22,7 +22,7 @@ const MobileMenu = () => {
       }
 
     return (
-        <section className="md:hidden relative z-50">
+        <section className="md:hidden relative z-40">
 
             <div className="flex items-center justify-between">
                 {/* shopping cart */}
