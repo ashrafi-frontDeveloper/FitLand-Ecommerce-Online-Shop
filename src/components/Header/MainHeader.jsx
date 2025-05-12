@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import { LuCircleArrowLeft } from "react-icons/lu";
 import { IoStorefrontOutline } from "react-icons/io5";
 import { AiOutlineLike } from "react-icons/ai";
@@ -5,6 +7,58 @@ import { IoCalendarNumberOutline } from "react-icons/io5";
 import { toPersianDigits } from "../../utils/ConvertToPersian";
 
 const MainHeader = () => {
+    const [count1, setCount1] = useState(0);
+
+        useEffect(() => {
+        let interval = setInterval(() => {
+            setCount1(prevCount => {
+                if (prevCount < 300) {
+                    return prevCount + 1;
+                } else {
+                    clearInterval(interval);
+                    return 300;
+                }
+            });
+        }, 10); // تنظیم سرعت شمارش (10 میلی‌ثانیه)
+
+        return () => clearInterval(interval); // پاکسازی هنگام خروج از کامپوننت
+    }, []);
+
+    const [count2, setCount2] = useState(0);
+
+    useEffect(() => {
+        let interval = setInterval(() => {
+            setCount2(prevCount => {
+                if (prevCount < 90) {
+                    return prevCount + 1;
+                } else {
+                    clearInterval(interval);
+                    return 90;
+                }
+            });
+        }, 20); // تنظیم سرعت شمارش (20 میلی‌ثانیه)
+
+        return () => clearInterval(interval); // پاکسازی هنگام خروج از کامپوننت
+    }, []);
+
+    const [count3, setCount3] = useState(0);
+
+    useEffect(() => {
+        let interval = setInterval(() => {
+            setCount3(prevCount => {
+                if (prevCount < 4) {
+                    return prevCount + 1;
+                } else {
+                    clearInterval(interval);
+                    return 4;
+                }
+            });
+        }, 100); // تنظیم سرعت شمارش (20 میلی‌ثانیه)
+
+        return () => clearInterval(interval); // پاکسازی هنگام خروج از کامپوننت
+    }, []);
+
+
     return (
         <>
             <section className="flex">
@@ -28,19 +82,21 @@ const MainHeader = () => {
                 <div className="hidden sm:flex flex-col gap-y-3.5 xl:gap-y-6 mt-16 xl:mt-20 mr-20">
                     <div className="flex items-center gap-x-4">
                         <div className="bg-[#EBF5FF] w-16 xl:w-20 h-16 xl:h-20 rounded-2xl flex items-center justify-center hover:shadow-[0_4px_14px_rgba(0,0,0,0.1),0_-4px_16px_rgba(0,0,0,0.1),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] transition-all duration-350">
-                            <IoStorefrontOutline className=" text-secondary w-7 xl:w-10 h-7 xl:h-10" />
+                            <IoStorefrontOutline className="text-secondary w-7 xl:w-10 h-7 xl:h-10" />
                         </div>
                         <div className="flex flex-col font-vazirB font-medium">
-                            <span className="text-secondary font-medium text-xl xl:text-2xl">{toPersianDigits(300)} +</span>
+                            <span className="text-secondary font-medium text-xl xl:text-2xl">
+                                {toPersianDigits(count1)} +
+                            </span>
                             <span className="text-NeutralSecondory font-medium text-sm xl:text-base">محصولات متنوع</span>
-                        </div>
+                    </div>
                     </div>
                     <div className="flex items-center gap-x-4">
                         <div className="bg-[#EBF5FF] w-16 xl:w-20 h-16 xl:h-20 rounded-2xl flex items-center justify-center hover:shadow-[0_4px_14px_rgba(0,0,0,0.1),0_-4px_16px_rgba(0,0,0,0.1),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] transition-all duration-350">
                             <AiOutlineLike className=" text-secondary w-7 xl:w-10 h-7 xl:h-10" />
                         </div>
                         <div className="flex flex-col font-vazirB font-medium">
-                            <span className="text-secondary font-medium text-xl xl:text-2xl">{toPersianDigits(95)} %</span>
+                            <span className="text-secondary font-medium text-xl xl:text-2xl">{toPersianDigits(count2)} %</span>
                             <span className="text-NeutralSecondory font-medium text-sm xl:text-base">رضایت مشتری</span>
                         </div>
                     </div>
@@ -49,7 +105,7 @@ const MainHeader = () => {
                             <IoCalendarNumberOutline className=" text-secondary w-7 xl:w-10 h-7 xl:h-10" />
                         </div>
                         <div className="flex flex-col font-vazirB font-medium">
-                            <span className="text-secondary font-medium text-xl xl:text-2xl">{toPersianDigits(4)} روز</span>
+                            <span className="text-secondary font-medium text-xl xl:text-2xl">{toPersianDigits(count3)} روز</span>
                             <span className="text-NeutralSecondory font-medium text-sm xl:text-base">از خرید تا دریافت</span>
                         </div>
                     </div>
