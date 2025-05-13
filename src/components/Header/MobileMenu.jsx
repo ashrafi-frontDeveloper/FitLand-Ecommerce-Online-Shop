@@ -23,10 +23,18 @@ const MobileMenu = () => {
 
     return (
         <section className="md:hidden relative z-40">
+            {/* overly */}
+            {isOpen && (
+            <div 
+                className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+                onClick={toggleMenu} // این باعث می‌شه با کلیک روی بیرون منو، بسته بشه
+            ></div>
+            )}
+
 
             <div className="flex items-center justify-between">
                 {/* shopping cart */}
-                <button className="z-40 relative w-10 h-10 flex items-center cursor-pointer justify-center rounded-xl bg-primary text-white">
+                <button className="z-30 relative w-10 h-10 flex items-center cursor-pointer justify-center rounded-xl bg-primary text-white">
                     <HiOutlineShoppingBag />
                     <span className=" absolute -top-1 -left-1 w-4 h-4 bg-secondary text-sm rounded-full">
                     {toPersianDigits(0)}
@@ -59,9 +67,11 @@ const MobileMenu = () => {
                     </div>
                 </div>
                 {/* Toggle Button */}
-                <button onClick={toggleMenu}>
+                <button className=" relative z-50" onClick={toggleMenu}>
                 {isOpen ? <IoIosClose className="w-10 h-10 cursor-pointer" /> : <IoIosMenu className="w-10 h-10 cursor-pointer" />}
                 </button>
+
+
                 {/* Mobile Menu */}
                 <nav className={clsx("flex absolute left-0 top-full w-full border-b-2 border-x-1 border-primary bg-Neutral bg-opacity-90 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl origin-top transform transition-all duration-500 z-50",{"scale-y-100 opacity-100 translate-y-0": isOpen,"scale-y-0 opacity-0 -translate-y-10": !isOpen,})}>
                     {/* menu left */}
