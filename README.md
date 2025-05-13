@@ -9,6 +9,13 @@ An e-commerce web application for selling sports equipment and apparel, based on
 - React Router
 - Vite (or CRA)
 
+---
+
+## 📷 Screenshots
+![Image](image-project.png)
+
+---
+
 ## 📁 Project Structure
 ```
 src/
@@ -21,6 +28,10 @@ src/
     │   └── UserActions.jsx 
     │   └── MainHeader.jsx
     │   └── MobileMenu.jsx
+    ├── Main
+    │   ├── Main.jsx
+    │   ├── FitnessEquipment.jsx
+    │   ├── NewProducts.jsx
 ├── pages/
 ├── layout/
 ├── routes/

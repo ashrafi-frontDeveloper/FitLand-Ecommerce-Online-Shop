@@ -6,7 +6,7 @@ const newProducts = [
     {id: 2, titleTop: ' جدید ترین تخفیفات فصل برند نایک' , titleButtom: 'تخفیف روی تمام محصولات ' , discount: 50 , img: 'images/new product/product2.jpg'},
 ]
 
-const NewProduct = () => {
+const NewProducts = () => {
 
 
 
@@ -49,4 +49,4 @@ const NewProduct = () => {
     )
 }
 
-export default NewProduct
+export default NewProducts
