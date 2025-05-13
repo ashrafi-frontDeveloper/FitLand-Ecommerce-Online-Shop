@@ -1,10 +1,16 @@
 import NewProduct from "./NewProduct"
+import FitnessEquipment from "./FitnessEquipment"
 
 const Main = () => {
     return (
         <>
-            <main className="container px-0 xl:px-4 p-0 2xl:px-10 pt-8 mx-auto mb-20 w-full">
-                <NewProduct />
+            <main>
+                <section className="container px-0 xl:px-4 p-0 2xl:px-10 pt-8 mx-auto mb-20 w-full">
+                    <NewProduct />
+                </section>
+                <section className="mt-0 md:-mt-20">
+                    <FitnessEquipment />
+                </section>
             </main>
         </>
     )
