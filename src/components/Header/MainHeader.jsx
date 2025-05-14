@@ -61,7 +61,7 @@ const MainHeader = () => {
 
     return (
         <>
-            <section className="flex">
+            <section className="flex 2xl:justify-between">
                 {/* section right => title website */}
                 <div className="mt-8 w-96 xl:w-[435px]">
                     <h3 className="text-[10px] md:text-sm xl:text-base font-vazirB font-medium text-NeutralSecondory mb-4">راحت و مطمئن خرید کنید!</h3>

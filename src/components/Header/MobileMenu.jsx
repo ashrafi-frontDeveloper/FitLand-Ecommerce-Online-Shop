@@ -73,7 +73,7 @@ const MobileMenu = () => {
 
 
                 {/* Mobile Menu */}
-                <nav className={clsx("flex absolute left-0 top-full w-full border-b-2 border-x-1 border-primary bg-Neutral bg-opacity-90 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl origin-top transform transition-all duration-500 z-50",{"scale-y-100 opacity-100 translate-y-0": isOpen,"scale-y-0 opacity-0 -translate-y-10": !isOpen,})}>
+                <nav className={clsx("flex absolute left-0 top-full w-full border-b-2 border-x-1 border-primary bg-Neutral bg-opacity-90 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl origin-top transform transition-all duration-700 z-50",{"scale-y-100 opacity-100 translate-y-0": isOpen,"scale-y-0 opacity-0 -translate-y-10": !isOpen,})}>
                     {/* menu left */}
                     <ul className="flex flex-col gap-4 p-6">
                         {menuItemsLeft.map((item, index) => (
