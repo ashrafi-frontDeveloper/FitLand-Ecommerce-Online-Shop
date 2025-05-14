@@ -36,7 +36,7 @@ const NewProducts = () => {
                     //             </p>
                     //         </div>
                     //     </div>
-                    // </div>
+                    // </div>vv
 
                     <div key={index} className="relative cursor-pointer max-w-xs overflow-hidden w-44 md:w-[392px] h-64 md:h-[462px] bg-background rounded-2xl">
                         {/* Image wrapper with group */}
