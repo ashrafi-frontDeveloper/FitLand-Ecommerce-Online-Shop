@@ -22,32 +22,32 @@ const SpecialDiscounts = () => {
                 </div>
                 {/* View all */}
                 <div className="relative">
-                    <a href="#" className="flex items-center justify-end gap-x-2 absolute left-0 top-10">
+                    <a href="#" className="flex items-center justify-end gap-x-2 absolute left-10 lg:left-0 top-10">
                         <LuCircleArrowLeft />
                         <span>مشاهده همه</span>
                     </a>
                 </div>
                 {/* products */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-center sm:justify-between gap-x-2 lg:gap-x-0">
                     {/* arrow right */}
-                    <div className="">
+                    <div className="hidden sm:block">
                         <RiArrowRightSLine className="w-8 h-8" />
                     </div>
                     {/* product */}
                     {
                     products.map(product => (
 
-                        <div className=" relative w-[366px] h-[467px] mt-20 bg-white rounded-4xl">
+                        <div key={product.id} className=" relative w-[163px] sm:w-64 lg:w-72 xl:w-[366px] h-[467px] sm:h-72 md:h-80 lg:h-96 xl:h-[467px] mt-20 bg-white rounded-4xl">
                             {/* icon VIP */}
                             {product.VIP && (
                             <div className="absolute left-2 top-2.5 z-10 animate-wiggle">
-                                <FcVip className="w-10 h-10" />
+                                <FcVip className="w-7 lg:w-10 h-7 lg:h-10" />
                             </div>
                             )}
                             {/* icon discound */}
                             {product.discound > 0 && (
                             <div className="absolute right-2 top-2.5 z-10 ml-12 animate-wiggle">
-                                <span className="bg-secondarySky w-10 h-10 p-1 rounded-full flex items-center justify-center text-white text-sm font-vazirB">
+                                <span className="bg-secondarySky w-7 lg:w-10 h-7 lg:h-10 p-1 rounded-full flex items-center justify-center text-white text-[12px] lg:text-sm font-vazirB">
                                 %{toPersianDigits(product.discound)}
                                 </span>
                             </div>
@@ -57,21 +57,21 @@ const SpecialDiscounts = () => {
                             {/* details */}
                             <div className="mt-4 p-4">
                                 <div className="flex flex-col gap-y-2">
-                                    <h6 className="" >{product.name}</h6>
+                                    <h6 className="text-[12px] md:text-sm xl:text-base font-bold" >{product.name}</h6>
                                     <span>{toPersianDigits(product.price)} تومان</span>
                                     <span>{product.size}</span>
                                 </div>
                                 <div className="flex relative mt-2">
-                                    <span className=" absolute right-6 inline-block w-5 h-5 rounded-full bg-black"></span>
-                                    <span className=" absolute right-3 inline-block w-5 h-5 rounded-full bg-secondaryCBCBCB"></span>
-                                    <span className=" absolute inline-block w-5 h-5 rounded-full bg-black"></span>
+                                    <span className=" absolute right-5 lg:right-6 inline-block w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-black"></span>
+                                    <span className=" absolute right-3 inline-block w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-secondaryCBCBCB"></span>
+                                    <span className=" absolute right-1 lg:right-0 inline-block w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-black"></span>
                                 </div>
                             </div>
                         </div>
                     ))
                     }
                     {/* arrow left */}
-                    <div className="">
+                    <div className="hidden sm:block">
                         <RiArrowLeftSLine className="w-8 h-8 cursor-pointer" />
                     </div>
                 </div>
