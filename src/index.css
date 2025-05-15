@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 @font-face {
   font-family: "Vazirmatn";
   src: url(../src/assets/fonts/Vazirmatn-Bold.ttf);
@@ -26,12 +28,13 @@
     /* Color coustom */
     --color-primary: #FA541C;
     --color-primary-400: #FB7649;
+    --color-primaryBack : #FEEEE8;
+    --color-background: #FFFFFF;
     --color-secondary: #032340;
     --color-secondery-700: #021425;
-    --color-background: #FFFFFF;
-    --color-primaryBack : #FEEEE8;
     --color-secondaryBack: #EBF5FF;
     --color-secondaryCBCBCB: #CBCBCB;
+    --color-secondarySky: #67AAE6;
     --color-Neutral: #f9f9f9;
     --color-NeutralSecondory :#606060;
 
@@ -40,12 +43,17 @@
     --font-vazirR: Vazirmatn , "sans-serif";
     --font-vazirM: Vazirmatn , "sans-serif";
     --font-vazirL: Vazirmatn , "sans-serif";
+
+    /* custom Animations */
+    
+
 }
 
 @layer utilities {
    .clip-badge-shape {
       clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
   }
+
 }
 
 
