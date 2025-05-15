@@ -45,13 +45,39 @@
     --font-vazirL: Vazirmatn , "sans-serif";
 
     /* custom Animations */
-    
-
 }
 
 @layer utilities {
    .clip-badge-shape {
       clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in-out;
+  }
+
+    @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  .animate-wiggle {
+    animation: wiggle 0.5s ease-in-out infinite;
   }
 
 }

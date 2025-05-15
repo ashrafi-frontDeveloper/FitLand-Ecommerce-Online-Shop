@@ -26,13 +26,13 @@ const SpecialDiscounts = () => {
                         <div className=" relative w-[366px] h-[467px] mt-20 bg-white rounded-4xl">
                             {/* icon VIP */}
                             {product.VIP && (
-                            <div className="absolute left-2 top-2.5 z-10">
+                            <div className="absolute left-2 top-2.5 z-10 animate-wiggle">
                                 <FcVip className="w-10 h-10" />
                             </div>
                             )}
                             {/* icon discound */}
                             {product.discound > 0 && (
-                            <div className="absolute right-2 top-2.5 z-10 ml-12">
+                            <div className="absolute right-2 top-2.5 z-10 ml-12 animate-wiggle">
                                 <span className="bg-secondarySky w-10 h-10 p-1 rounded-full flex items-center justify-center text-white text-sm font-vazirB">
                                 %{toPersianDigits(product.discound)}
                                 </span>
