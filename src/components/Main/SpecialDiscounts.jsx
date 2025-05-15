@@ -1,5 +1,8 @@
 import { toPersianDigits } from "../../utils/ConvertToPersian"
+import { LuCircleArrowLeft } from "react-icons/lu";
 import { FcVip } from "react-icons/fc";
+import { RiArrowLeftSLine } from "react-icons/ri";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const products = [
     {id: 1, img: '/public/images/discound-product/img2.jpg' , name: 'سویشرت نایک مدل AO-14' , price: 300_000 , size: 'از سایز L تا XXL' , discound: 0 , VIP: true},
@@ -14,11 +17,22 @@ const SpecialDiscounts = () => {
         <>
             <div className="container h-[600px] px-0 xl:px-4 p-0 2xl:px-10 pt-8 mx-auto mb-20 w-full">
                 {/* title section */}
-                <div className=" relative flex items-center justify-center ">
+                <div className=" relative flex items-center justify-center">
                     <span className=" absolute -top-14 rounded-3xl text-2xl 2xl:text-3xl font-vazirB font-bold bg-white px-10 py-2.5">تخفیفات ویژه</span>
+                </div>
+                {/* View all */}
+                <div className="relative">
+                    <a href="#" className="flex items-center justify-end gap-x-2 absolute left-0 top-10">
+                        <LuCircleArrowLeft />
+                        <span>مشاهده همه</span>
+                    </a>
                 </div>
                 {/* products */}
                 <div className="flex items-center justify-between">
+                    {/* arrow right */}
+                    <div className="">
+                        <RiArrowRightSLine className="w-8 h-8" />
+                    </div>
                     {/* product */}
                     {
                     products.map(product => (
@@ -56,6 +70,10 @@ const SpecialDiscounts = () => {
                         </div>
                     ))
                     }
+                    {/* arrow left */}
+                    <div className="">
+                        <RiArrowLeftSLine className="w-8 h-8 cursor-pointer" />
+                    </div>
                 </div>
             </div>
         </>
