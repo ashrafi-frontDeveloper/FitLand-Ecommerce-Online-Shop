@@ -8,14 +8,14 @@ import { useRef } from 'react';
 
 const products = [
     {id: 1, img: 'images/new sport shoes/img1.png' , name: 'نایک مدل AO-14' , price: 300_000 , size: 'از سایز L تا XXL' , discound: 24 , VIP: true},
-    {id: 2, img: 'images/new sport shoes/img2.png' , name: 'کفش نایک 2024', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
+    {id: 2, img: 'images/new sport shoes/img2.png' , name: 'کفش نایک 2024', price: 200_000, size: 'از سایز L تا XXL' , discound: 0 , VIP: false},
     {id: 3, img: 'images/new sport shoes/img3.png', name: 'کفش نایک مدل S-2000', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
-    {id: 4, img: 'images/new sport shoes/img1.png' , name: 'نایک مدل AO-14' , price: 300_000 , size: 'از سایز L تا XXL' , discound: 24 , VIP: true},
+    {id: 4, img: 'images/new sport shoes/img1.png' , name: 'نایک مدل AO-14' , price: 300_000 , size: 'از سایز L تا XXL' , discound: 0 , VIP: true},
     {id: 5, img: 'images/new sport shoes/img2.png' , name: 'کفش نایک 2024', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
     {id: 6, img: 'images/new sport shoes/img3.png', name: 'کفش نایک مدل S-2000', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
 ]
 
-const SpecialDiscounts = () => {
+const NewestSportsShoes = () => {
     const productContainerRef = useRef(null);
 
     const scrollLeft = () => {
@@ -95,4 +95,4 @@ const SpecialDiscounts = () => {
 
 
 
-export default SpecialDiscounts
+export default NewestSportsShoes
