@@ -82,6 +82,14 @@
 
 }
 
+/* در فایل CSS global یا index.css اضافه کن */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 
 
