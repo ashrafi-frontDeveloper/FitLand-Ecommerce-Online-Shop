@@ -27,13 +27,13 @@ const NewestSportsShoes = () => {
     };
 
     return (
-        <div className="container h-[600px] px-0 xl:px-4 p-0 2xl:px-10 pt-8 mx-auto mb-20 w-full">
+        <div className="container h-[450px] sm:h-[550px]  md:h-[500px] lg:h-[600px] px-0 xl:px-4 p-0 2xl:px-10 pt-8 mx-auto w-full">
             {/* title */}
             <div className="relative flex items-center justify-center">
                 <span className="absolute -top-14 rounded-3xl text-2xl 2xl:text-3xl font-vazirB font-bold bg-white px-10 py-2.5">جدیدترین کفش های ورزشی</span>
             </div>
 
-            {/* مشاهده همه */}
+            {/* View all */}
             <div className="relative">
                 <a href="#" className="flex items-center justify-end gap-x-2 absolute left-10 lg:left-0 top-10">
                     <LuCircleArrowLeft />

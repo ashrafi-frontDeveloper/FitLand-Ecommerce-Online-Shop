@@ -27,7 +27,7 @@ const SpecialDiscounts = () => {
     };
 
     return (
-        <div className="container h-[600px] px-0 xl:px-4 p-0 2xl:px-10 pt-8 mx-auto mb-20 w-full">
+        <div className="container h-[350px] md:h-[400px] lg:h-[450px] xl:h-[600px] px-0 xl:px-4 p-0 2xl:px-10 pt-8 mx-auto mb-20 mt-20 w-full">
             {/* title */}
             <div className="relative flex items-center justify-center">
                 <span className="absolute -top-14 rounded-3xl text-2xl 2xl:text-3xl font-vazirB font-bold bg-white px-10 py-2.5">تخفیفات ویژه</span>
