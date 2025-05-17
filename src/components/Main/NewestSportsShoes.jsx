@@ -7,12 +7,12 @@ import { useRef } from 'react';
 
 
 const products = [
-    {id: 1, img: 'images/discound-product/img2.jpg' , name: 'سویشرت نایک مدل AO-14' , price: 300_000 , size: 'از سایز L تا XXL' , discound: 0 , VIP: true},
-    {id: 2, img: 'images/discound-product/img3.png' , name: 'ست نایک مدل S-2000', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
-    {id: 3, img: 'images/discound-product/img1.png', name: 'کفش نایک مدل S-2000', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
-    {id: 6, img: 'images/discound-product/img2.jpg' , name: 'سویشرت نایک مدل AO-14' , price: 300_000 , size: 'از سایز L تا XXL' , discound: 0 , VIP: true},
-    {id: 4, img: 'images/discound-product/img3.png' , name: 'ست نایک مدل S-2000', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
-    {id: 5, img: 'images/discound-product/img1.png', name: 'کفش نایک مدل S-2000', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
+    {id: 1, img: 'images/new sport shoes/img1.png' , name: 'نایک مدل AO-14' , price: 300_000 , size: 'از سایز L تا XXL' , discound: 24 , VIP: true},
+    {id: 2, img: 'images/new sport shoes/img2.png' , name: 'کفش نایک 2024', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
+    {id: 3, img: 'images/new sport shoes/img3.png', name: 'کفش نایک مدل S-2000', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
+    {id: 4, img: 'images/new sport shoes/img1.png' , name: 'نایک مدل AO-14' , price: 300_000 , size: 'از سایز L تا XXL' , discound: 24 , VIP: true},
+    {id: 5, img: 'images/new sport shoes/img2.png' , name: 'کفش نایک 2024', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
+    {id: 6, img: 'images/new sport shoes/img3.png', name: 'کفش نایک مدل S-2000', price: 200_000, size: 'از سایز L تا XXL' , discound: 24 , VIP: false},
 ]
 
 const SpecialDiscounts = () => {
@@ -30,7 +30,7 @@ const SpecialDiscounts = () => {
         <div className="container h-[600px] px-0 xl:px-4 p-0 2xl:px-10 pt-8 mx-auto mb-20 w-full">
             {/* title */}
             <div className="relative flex items-center justify-center">
-                <span className="absolute -top-14 rounded-3xl text-2xl 2xl:text-3xl font-vazirB font-bold bg-white px-10 py-2.5">تخفیفات ویژه</span>
+                <span className="absolute -top-14 rounded-3xl text-2xl 2xl:text-3xl font-vazirB font-bold bg-white px-10 py-2.5">جدیدترین کفش های ورزشی</span>
             </div>
 
             {/* مشاهده همه */}
@@ -74,9 +74,9 @@ const SpecialDiscounts = () => {
                                 <span>{toPersianDigits(product.price)} تومان</span>
                                 <span className="text-sm sm:text-base">{product.size}</span>
                                 <div className="flex relative mt-2">
-                                    <span className="absolute right-5 lg:right-6 w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-black"></span>
-                                    <span className="absolute right-3 w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-secondaryCBCBCB"></span>
-                                    <span className="absolute right-1 lg:right-0 w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-black"></span>
+                                    <span className="absolute right-5 lg:right-6 w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-sky-700"></span>
+                                    <span className="absolute right-3 w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-black"></span>
+                                    <span className="absolute right-1 lg:right-0 w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-orange-800"></span>
                                 </div>
                             </div>
                         </div>

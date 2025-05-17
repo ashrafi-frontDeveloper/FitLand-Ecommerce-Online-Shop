@@ -1,6 +1,7 @@
 import NewProducts from "./NewProducts"
 import FitnessEquipment from "./FitnessEquipment"
 import SpecialDiscounts from "./SpecialDiscounts"
+import NewestSportsShoes from "./NewestSportsShoes"
 
 const Main = () => {
     return (
@@ -12,8 +13,11 @@ const Main = () => {
                 <section className="mt-0 md:mt-14 xl:mt-16 2xl:mt-20">
                     <FitnessEquipment />
                 </section>
-                <section className="mt-0 md:mt-14 xl:mt-16 2xl:mt-20 mb-24 bg-[#FFF7F4]">
+                <section className="mt-0 md:mt-14 xl:mt-16 2xl:mt-20 mb-24 pb-10 bg-[#FFF7F4]">
                     <SpecialDiscounts />
+                </section>
+                <section>
+                    <NewestSportsShoes />
                 </section>
             </main>
         </>
