@@ -6,7 +6,7 @@ import FooterBottom from "./FooterBottom"
 const Footer = () => {
     return (
         <>
-        <footer className="bg-secondary h-[500px]"> 
+        <footer className="bg-secondary h-[500px] pt-[72px] px-[108px]"> 
             <FooterTop />
             <FooterAbout />
             <FooterLinks />
