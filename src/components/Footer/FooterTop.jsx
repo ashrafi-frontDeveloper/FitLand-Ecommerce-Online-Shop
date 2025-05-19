@@ -24,7 +24,7 @@ const FooterTop = () => {
                 {/* newslatter */}
                 <div className="flex flex-col gap-y-4 gap-x-2 mt-6 h-9 w-[330px]">
                     <h6 className="font-bold text-white">خبرنامه فیت لند</h6>
-                    <form className="flex items-center justify-between px-5 py-1 w-[330px] rounded-md border border-NeutralSecondory" action="">
+                    <form className="flex items-center justify-between px-1.5 py-1 w-[330px] rounded-md border border-NeutralSecondory" action="">
                         <div className="flex items-center gap-x-2 ">
                             <CgMail className="w-5 h-5 text-Neutral868686" />
                             <input type="email" className=" outline-none text-Neutral868686" placeholder="ایمیل خود وارد کنید ..." />

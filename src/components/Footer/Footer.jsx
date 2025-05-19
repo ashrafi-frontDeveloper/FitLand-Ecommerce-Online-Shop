@@ -6,10 +6,13 @@ import FooterBottom from "./FooterBottom"
 const Footer = () => {
     return (
         <>
-        <footer className="bg-secondary h-[500px] pt-[72px] px-[108px]"> 
-            <FooterTop />
+        <footer className=" bg-secondary pt-[72px] px-[108px]"> 
+            <section className="flex gap-x-10">
+                <FooterLinks />
+                <FooterTop />
+            </section>
+
             <FooterAbout />
-            <FooterLinks />
             <FooterBottom />
         </footer>
         </>
