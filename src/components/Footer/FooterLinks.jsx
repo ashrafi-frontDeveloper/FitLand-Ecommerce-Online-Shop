@@ -78,7 +78,7 @@ const FooterLinks = () => {
 
   return (
     <>
-      {/* دسکتاپ */}
+      {/* Desktop */}
       <div className="hidden md:grid grid-cols-2 md:grid-cols-4 text-white text-[12px] xl:text-sm w-full">
         {columns.map((col, index) => (
           <div key={index}>
@@ -94,26 +94,18 @@ const FooterLinks = () => {
         ))}
       </div>
 
-      {/* موبایل */}
-      <div className="md:hidden w-full text-white text-[12px]">
+      {/* Mobile */}
+      {/* <div className="md:hidden w-full text-white text-[12px]">
         {columns.map((col, index) => (
           <div key={index} className="border-b border-gray-600">
-            <button
-              className="w-full flex justify-between items-center py-3 px-1"
-              onClick={() => toggleIndex(index)}
-            >
+            <button className="w-full flex justify-between items-center py-3 px-1" onClick={() => toggleIndex(index)}>
               <span className="font-bold text-sm">{col.title}</span>
-              <FaChevronDown
-                className={`transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
-              />
+              <FaChevronDown className={` transition-all duration-500 ${openIndex === index ? "rotate-180" : ""}`}  />
             </button>
             {openIndex === index && (
               <ul className="space-y-2 px-4 pb-4">
                 {col.links.map((link, idx) => (
-                  <li
-                    key={idx}
-                    className="text-[11px] text-gray-300 hover:text-primary transition-colors cursor-pointer"
-                  >
+                  <li key={idx} className="text-[11px] text-gray-300 hover:text-primary transition-colors cursor-pointer">
                     {link}
                   </li>
                 ))}
@@ -121,7 +113,42 @@ const FooterLinks = () => {
             )}
           </div>
         ))}
+      </div> */}
+      <div className="md:hidden w-full text-white text-[12px]">
+  {columns.map((col, index) => (
+    <div key={index} className="border-b border-gray-600">
+      <button
+        className="w-full flex justify-between items-center py-3 px-1"
+        onClick={() => toggleIndex(index)}
+      >
+        <span className="font-bold text-sm">{col.title}</span>
+        <FaChevronDown
+          className={`transition-transform duration-300 ${
+            openIndex === index ? 'rotate-180' : ''
+          }`}
+        />
+      </button>
+
+      <div
+        className={`transition-all duration-500 overflow-hidden ${
+          openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <ul className="space-y-2 px-4 py-4">
+          {col.links.map((link, idx) => (
+            <li
+              key={idx}
+              className="text-[11px] text-gray-300 hover:text-primary transition-colors cursor-pointer"
+            >
+              {link}
+            </li>
+          ))}
+        </ul>
       </div>
+    </div>
+  ))}
+      </div>
+
     </>
   );
 };
