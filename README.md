@@ -32,10 +32,26 @@ src/
     │   ├── Main.jsx
     │   ├── FitnessEquipment.jsx
     │   ├── NewProducts.jsx
+    │   ├── BestsellerProducts.jsx
+    │   ├── BicyclesSection.jsx
+    │   ├── Camp.jsx
+    │   ├── NewestSportsShoes.jsx
+    │   ├── Payment.jsx
+    │   ├── SpecialDiscounts.jsx
+    │   ├── SpecialDiscounts2.jsx
+    │   ├── SportsNews.jsx
+    ├── Footer
+    |   ├── Footer.jsx
+    │   ├── FooterAbout.jsx
+    │   ├── FooterBottom.jsx
+    │   ├── FooterLinks.jsx
+    │   ├── FooterTop.jsx
 ├── pages/
 ├── layout/
 ├── routes/
 ├── utils/
+    ├── ConvertToPersian.jsx
+
 
 ```
 
