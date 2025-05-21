@@ -46,9 +46,18 @@ src/
     │   ├── FooterBottom.jsx
     │   ├── FooterLinks.jsx
     │   ├── FooterTop.jsx
+    ├── AuthWrapper
+    |   ├── AuthWrapper.jsx
+    │   ├── Button.jsx
+    │   ├── Input.jsx
+    │   ├── LoginForm.jsx
+    │   ├── RegisterForm.jsx
 ├── pages/
+│   ├── LoginPage.jsx
+│   ├── RegisterPage.jsx
 ├── layout/
 ├── routes/
+│   ├── AppRoutes.jsx
 ├── utils/
     ├── ConvertToPersian.jsx
 
