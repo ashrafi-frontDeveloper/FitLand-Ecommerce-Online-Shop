@@ -8,9 +8,9 @@ import './App.css'
 export default function App() {
   return (
     <div>
-      <div className=''>
+      <div>
         <Header></Header>
-        {/* <AppRoutes /> */}
+        <AppRoutes/>
         <Main></Main>
         <Footer></Footer>
       </div>

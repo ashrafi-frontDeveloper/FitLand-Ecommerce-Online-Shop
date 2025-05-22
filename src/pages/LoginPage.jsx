@@ -3,7 +3,7 @@ import LoginForm from "../components/AuthWrapper/LoginForm";
 
 const LoginPage = () => {
   return (
-    <AuthWrapper title="ورود به حساب">
+    <AuthWrapper title="ورود | ثبت نام">
       <LoginForm />
     </AuthWrapper>
   );

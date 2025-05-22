@@ -3,7 +3,7 @@ import RegisterForm from "../components/AuthWrapper/RegisterForm";
 
 const RegisterPage = () => {
   return (
-    <AuthWrapper title="ورود به حساب">
+    <AuthWrapper title="ثبت نام حساب کاربری">
       <RegisterForm />
     </AuthWrapper>
   );
