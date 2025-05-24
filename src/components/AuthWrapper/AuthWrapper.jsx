@@ -2,7 +2,7 @@ import { HiOutlineHome } from "react-icons/hi2";
 
 const AuthWrapper = ({ title, children }) => {
   return (
-    <div className="flex flex-col items-center justify-center py-20 bg-secondary/15 px-10 md:px-20">
+    <div className="flex flex-col items-center justify-center py-20 px-10 md:px-20 bg-secondery-700/15">
       {/* logo */}
       <a href="/">
         <svg className="w-28 mb-10 lg:w-[151px] h-7 lg:h-8 z-50" viewBox="0 0 151 32" fill="none">
