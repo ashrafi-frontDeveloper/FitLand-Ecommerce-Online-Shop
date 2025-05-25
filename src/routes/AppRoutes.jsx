@@ -8,14 +8,14 @@ import AuthLayout from "../layout/AuthLayout";
 export default function AppRoutes() {
   return (
     <Routes>
-      {/* صفحات اصلی */}
+      {/* Home Page */}
       <Route path="/" element={
           <MainLayout>
             <Home />
           </MainLayout>
       }/>
 
-      {/* صفحات فرم‌ها */}
+      {/* Form Page */}
       <Route path="/login" element={
           <AuthLayout>
             <LoginPage />
