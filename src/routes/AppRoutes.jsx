@@ -4,6 +4,7 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import MainLayout from "../layout/MainLayout";
 import AuthLayout from "../layout/AuthLayout";
+import NotFound from "../components/NotFound/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -27,6 +28,8 @@ export default function AppRoutes() {
             <RegisterPage />
           </AuthLayout>
         }/>
+
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

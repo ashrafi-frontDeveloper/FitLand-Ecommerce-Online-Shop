@@ -93,7 +93,7 @@ const RegisterForm = () => {
         onClear={() => handleClear("password")}
       />
       <Button text="ورود" />
-      <div className="mt-2 flex items-center">
+      <div className="mt-5 flex items-center">
         <Input type="checkbox" />
         <p className="text-[12px] pr-2"><a href="#" className="text-sky-500">قوانین</a> و <a href="#" className="text-sky-500">مقررات</a> را خوانده و قبول دارم.</p>
       </div>
