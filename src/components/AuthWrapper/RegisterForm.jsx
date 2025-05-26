@@ -58,7 +58,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <form  onSubmit={handleSubmit}>
+    <form className="border-s-Neutral868686 shadow-2xl rounded-xl p-4"  onSubmit={handleSubmit}>
       <Input
         label="نام و نام خانوادگی"
         type="text"
