@@ -33,7 +33,7 @@ const Input = ({
         {value && (
           <IoIosClose
             size={24}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 text-red-500 cursor-pointer"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 text-block cursor-pointer"
             onClick={onClear}
           />
         )}
