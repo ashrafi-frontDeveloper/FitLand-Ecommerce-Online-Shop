@@ -29,6 +29,7 @@ export default function AppRoutes() {
           </AuthLayout>
         }/>
 
+      {/* Not Found 404 Error */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
