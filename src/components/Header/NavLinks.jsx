@@ -53,7 +53,7 @@
   
 //   export default NavLinks;
 
-// import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { HiOutlineStar } from "react-icons/hi2";
 import { TiFlashOutline } from "react-icons/ti";
@@ -127,7 +127,26 @@ const NavLinks = () => {
         <RightMenu onHover={setActiveMenu} />
         <LeftMenu />
       </nav>
-      {activeMenu && (
+      <AnimatePresence>
+        {activeMenu && (
+          <motion.div
+            key={activeMenu}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="absolute top-full right-0 left-0 bg-white shadow-lg p-5 z-30 flex flex-wrap justify-center gap-4 text-sm font-vazirB text-gray-700"
+          >
+            {subMenus[activeMenu].map((item, idx) => (
+              <div key={idx} className="w-40 hover:text-primary cursor-pointer transition">
+                {item}
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* {activeMenu && (
         <div className="absolute top-full right-0 left-0 bg-white shadow-lg p-5 z-30 flex flex-wrap justify-center gap-4 text-sm font-vazirB text-gray-700">
           {subMenus[activeMenu].map((submenu, idx) => (
             <a
@@ -139,7 +158,7 @@ const NavLinks = () => {
             </a>
           ))}
         </div>
-      )}
+      )} */}
     </div>
   );
 };
