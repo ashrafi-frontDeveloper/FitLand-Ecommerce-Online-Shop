@@ -67,7 +67,7 @@ const subMenus = {
   "شیکر و جاگ": ["شیکرهای پروتئین", "جاگ آب", "ست شیکر"]
 };
 
-export const RightMenu = ({ onHover }) => {
+export const RightMenu = ({ onHoverEnter, onHoverLeave }) => {
   const menuItems = Object.keys(subMenus);
 
   return (
@@ -75,8 +75,8 @@ export const RightMenu = ({ onHover }) => {
       {menuItems.map((item, index) => (
         <li
           key={index}
-          onMouseEnter={() => onHover(item)}
-          onMouseLeave={() => onHover(null)}
+          onMouseEnter={() => onHoverEnter(item)}
+          onMouseLeave={onHoverLeave}
           className="relative"
         >
           <a href="#" className="transition-all duration-300 hover:text-secondary">
@@ -87,6 +87,7 @@ export const RightMenu = ({ onHover }) => {
     </ul>
   );
 };
+
 
 export const LeftMenu = () => {
   const menuItems = {
@@ -114,19 +115,43 @@ export const LeftMenu = () => {
 
 const NavLinks = () => {
   const [activeMenu, setActiveMenu] = useState(null);
+  const [isHovering, setIsHovering] = useState(false);
+
+  // زمان کمی تاخیر برای بستن منو (در صورت خروج ماوس)
+  const handleMouseLeave = () => {
+    setTimeout(() => {
+      if (!isHovering) {
+        setActiveMenu(null);
+      }
+    }, 150); // می‌تونی اینو کم یا زیاد کنی
+  };
 
   return (
     <div className="relative">
+      {/* بک‌درآپ */}
       <div
         className={`fixed inset-0 z-10 transition backdrop-blur-sm duration-300 ${
           activeMenu ? "block" : "hidden"
         }`}
         onMouseEnter={() => setActiveMenu(null)}
       ></div>
+
+      {/* نَو */}
       <nav className="hidden md:flex items-center justify-between bg-Neutral rounded-2xl px-5 lg:px-10 py-5 relative z-20">
-        <RightMenu onHover={setActiveMenu} />
+        <RightMenu
+          onHoverEnter={(item) => {
+            setActiveMenu(item);
+            setIsHovering(true);
+          }}
+          onHoverLeave={() => {
+            setIsHovering(false);
+            handleMouseLeave();
+          }}
+        />
         <LeftMenu />
       </nav>
+
+      {/* دراپ‌داون */}
       <AnimatePresence>
         {activeMenu && (
           <motion.div
@@ -135,6 +160,11 @@ const NavLinks = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => {
+              setIsHovering(false);
+              handleMouseLeave();
+            }}
             className="absolute top-full right-0 left-0 bg-white shadow-lg p-5 z-30 flex flex-wrap justify-center gap-4 text-sm font-vazirB text-gray-700"
           >
             {subMenus[activeMenu].map((item, idx) => (
@@ -145,22 +175,9 @@ const NavLinks = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* {activeMenu && (
-        <div className="absolute top-full right-0 left-0 bg-white shadow-lg p-5 z-30 flex flex-wrap justify-center gap-4 text-sm font-vazirB text-gray-700">
-          {subMenus[activeMenu].map((submenu, idx) => (
-            <a
-              href="#"
-              key={idx}
-              className="hover:text-secondary transition"
-            >
-              {submenu}
-            </a>
-          ))}
-        </div>
-      )} */}
     </div>
   );
 };
+
 
 export default NavLinks;
