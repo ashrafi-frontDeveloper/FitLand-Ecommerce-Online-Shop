@@ -52,10 +52,15 @@ src/
     │   ├── Input.jsx
     │   ├── LoginForm.jsx
     │   ├── RegisterForm.jsx
+    ├── NotFound
+    |   ├── NotFound.jsx
 ├── pages/
+|   ├── Home.jsx
 │   ├── LoginPage.jsx
 │   ├── RegisterPage.jsx
 ├── layout/
+|   ├── AuthLayout.jsx
+│   ├── MainLayout.jsx
 ├── routes/
 │   ├── AppRoutes.jsx
 ├── utils/
