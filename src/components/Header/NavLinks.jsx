@@ -4,13 +4,30 @@ import { HiOutlineStar } from "react-icons/hi2";
 import { TiFlashOutline } from "react-icons/ti";
 import { FaAward } from "react-icons/fa6";
 
+// main menu -> sub menu -> sub - sub menu
 const subMenus = {
-  "مردانه": ["کفش های مردانه", "لباس های مردانه", "اکسسوری مردانه"],
-  "زنانه": ["کفش های زنانه", "لباس های زنانه", "اکسسوری زنانه"],
-  "بچگانه": ["پوشاک بچگانه", "کفش بچگانه", "اکسسوری بچگانه"],
-  "لوازم ورزشی": ["تجهیزات باشگاهی", "لباس ورزشی", "تجهیزات یوگا"],
-  "شیکر و جاگ": ["شیکرهای پروتئین", "جاگ آب", "ست شیکر"]
+  "مردانه": {
+    "کفش های مردانه": ["مجلسی", "تابستانه", "ورزشی", "پیاده‌روی", "بوت"],
+    "لباس های مردانه": ["تیشرت", "پیراهن", "شلوار", "سوییشرت", "کت"],
+    "اکسسوری مردانه": ["ساعت", "کلاه", "کمربند", "عینک", "جوراب"]
+  },
+  "زنانه": {
+    "کفش های زنانه": ["پاشنه بلند", "کتانی", "صندل", "بوت", "کالج"],
+    "لباس های زنانه": ["مانتو", "شومیز", "شلوار", "تاپ", "دامن"],
+    "اکسسوری زنانه": ["کیف", "ساعت", "روسری", "عینک", "زیورآلات"]
+  },
+  "بچگانه" : {
+    "پوشاک بچگانه": ['تابستانه', 'زمستانه' , 'اسپورت'],
+    "کفش بچگانه": ['اسپورت', 'تابستانه' , 'کتونی', 'مجلسی'],
+    "اکسسوری بچگانه": ['زیورآلات', 'دستبند' , 'گردنبند', 'کلاه']
+  },
+    "لوازم ورزشی" : {
+    "تجهیزات باشگاهی": ['دمبل', 'تردمیل' , 'میز پرس سینه', 'کش های ورزشی' , 'طناب'],
+    "لباس ورزشی": ['ست ورزشی', 'ست تیم فوتبال' , 'ست T-shirt , Short', 'عرق گیر'],
+    "شیکر و جاگ": ['شیکر استیل', 'شیکر الکترونیکی' , 'شیکر 2 لیتری', 'انواع جاگ']
+  }
 };
+
 
 export const RightMenu = ({ onHoverEnter, onHoverLeave }) => {
   const menuItems = Object.keys(subMenus);
@@ -110,13 +127,21 @@ const NavLinks = () => {
               setIsHovering(false);
               handleMouseLeave();
             }}
-            className="absolute top-full right-0 left-0 bg-white shadow-lg p-5 z-30 flex flex-wrap justify-center gap-4 text-sm font-vazirB text-gray-700"
+            className="absolute top-full right-0 left-0 bg-white shadow-lg rounded-4xl p-5 z-30 flex flex-wrap justify-center gap-4 text-sm font-vazirB text-gray-700"
           >
-            {subMenus[activeMenu].map((item, idx) => (
-              <div key={idx} className="w-40 hover:text-primary cursor-pointer transition">
-                {item}
+            {Object.entries(subMenus[activeMenu]).map(([category, items], idx) => (
+              <div key={idx} className="w-40">
+                <div className="font-bold text-lg md:text-xl mb-2 md:gap-x-5 text-primary transition cursor-pointer">{category}</div>
+                <ul className="space-y-1">
+                  {items.map((subItem, subIdx) => (
+                    <li key={subIdx} className="text-sm md:text-lg hover:text-secondary font-bold cursor-pointer transition">
+                      {subItem}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
+
           </motion.div>
         )}
       </AnimatePresence>
