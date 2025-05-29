@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
@@ -7,7 +8,33 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { TiFlashOutline } from "react-icons/ti";
 import { toPersianDigits } from "../../utils/ConvertToPersian";
 import { FaAward } from "react-icons/fa6";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropUpLine } from "react-icons/ri";
 import clsx from "clsx";
+
+const subMenus = {
+  "مردانه": {
+    "کفش های مردانه": ["مجلسی", "تابستانه", "ورزشی", "پیاده‌روی", "بوت"],
+    "لباس های مردانه": ["تیشرت", "پیراهن", "شلوار", "سوییشرت", "کت"],
+    "اکسسوری مردانه": ["ساعت", "کلاه", "کمربند", "عینک", "جوراب"]
+  },
+  "زنانه": {
+    "کفش های زنانه": ["پاشنه بلند", "کتانی", "صندل", "بوت", "کالج"],
+    "لباس های زنانه": ["مانتو", "شومیز", "شلوار", "تاپ", "دامن"],
+    "اکسسوری زنانه": ["کیف", "ساعت", "روسری", "عینک", "زیورآلات"]
+  },
+  "بچگانه" : {
+    "پوشاک بچگانه": ['تابستانه', 'زمستانه' , 'اسپورت'],
+    "کفش بچگانه": ['اسپورت', 'تابستانه' , 'کتونی', 'مجلسی'],
+    "اکسسوری بچگانه": ['زیورآلات', 'دستبند' , 'گردنبند', 'کلاه']
+  },
+    "لوازم ورزشی" : {
+    "تجهیزات باشگاهی": ['دمبل', 'تردمیل' , 'میز پرس سینه', 'کش های ورزشی' , 'طناب'],
+    "لباس ورزشی": ['ست ورزشی', 'ست تیم فوتبال' , 'ست T-shirt , Short', 'عرق گیر'],
+    "شیکر و جاگ": ['شیکر استیل', 'شیکر الکترونیکی' , 'شیکر 2 لیتری', 'انواع جاگ']
+  }
+};
+
 
 const MobileMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +43,14 @@ const MobileMenu = () => {
 
     const menuItemsLeft = ['مردانه', 'زنانه', 'بچگانه' , 'لوازم ورزشی' , 'شیکر و جاگ']
 
-      const menuItemsRight = {
-        title : ['جدیترین محصولات', 'تخفیفات ویژه' , 'پرفروش ترین ها'],
-        icons: [HiOutlineStar ,TiFlashOutline ,FaAward]
-      }
+    const menuItemsRight = {
+    title : ['جدیترین محصولات', 'تخفیفات ویژه' , 'پرفروش ترین ها'],
+    icons: [HiOutlineStar ,TiFlashOutline ,FaAward]
+    }
+
+    const [activeMenu, setActiveMenu] = useState(null);
+    const [activeCategory, setActiveCategory] = useState(null);
+
 
     return (
         <section className="md:hidden relative z-40">
@@ -30,6 +61,7 @@ const MobileMenu = () => {
                 onClick={toggleMenu} // این باعث می‌شه با کلیک روی بیرون منو، بسته بشه
             ></div>
             )}
+
 
 
             <div className="flex items-center justify-between">
@@ -75,22 +107,78 @@ const MobileMenu = () => {
                 {/* Mobile Menu */}
                 <nav className={clsx("flex absolute left-0 top-full w-full border-b-2 border-x-1 border-primary bg-Neutral bg-opacity-90 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl origin-top transform transition-all duration-700 z-50",{"scale-y-100 opacity-100 translate-y-0": isOpen,"scale-y-0 opacity-0 -translate-y-10": !isOpen,})}>
                     {/* menu left */}
-                    <ul className="flex flex-col gap-4 p-6">
-                        {menuItemsLeft.map((item, index) => (
-                        <li
-                            key={index}
-                            className={clsx(
-                            "transition-all duration-500 ease-in-out",
-                            isOpen ? `delay-${index * 100}` : "delay-0"
-                            )}
-                        >
-                            <a
-                            href="#"
-                            className="text-gray-800 font-medium hover:text-orange-500 transition-colors duration-300"
+                    <ul className="flex flex-col gap-y-4 p-6">
+                        {Object.entries(subMenus).map(([menu, categories], i) => (
+                            <li key={i} className="flex flex-col ">
+                            {/* منوی اصلی */}
+                            <div
+                                onClick={() =>
+                                setActiveMenu(activeMenu === menu ? null : menu)
+                                }
+                                className="text-right font-bold text-gray-800 hover:text-orange-500 cursor-pointer flex justify-between items-center transition-all duration-300"
                             >
-                            {item}
-                            </a>
-                        </li>
+                                {menu}
+                                <span>{activeMenu === menu ? <RiArrowDropUpLine className="w-7 h-7" /> : <RiArrowDropDownLine className="w-7 h-7" />}</span>
+                            </div>
+
+                            {/* باز شدن دسته‌بندی‌ها با انیمیشن */}
+                            <AnimatePresence initial={false}>
+                                {activeMenu === menu && (
+                                <motion.ul
+                                    key="submenu"
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: "auto" }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                                    className=" flex flex-col gap-y-2.5 mt-2.5 overflow-hidden"
+                                >
+                                    {Object.entries(categories).map(([category, items], j) => (
+                                    <li key={j} className="text-[13px] font-bold flex flex-col">
+                                        {/* دسته‌بندی داخلی */}
+                                        <div
+                                        onClick={() =>
+                                            setActiveCategory(
+                                            activeCategory === category ? null : category
+                                            )
+                                        }
+                                        className="text-right font-medium text-gray-700 hover:text-secondary cursor-pointer flex justify-between items-center"
+                                        >
+                                        {category}
+                                        <span>
+                                            {activeCategory === category ? "−" : "+"}
+                                        </span>
+                                        </div>
+
+                                        {/* باز شدن آیتم‌ها با انیمیشن */}
+                                        <AnimatePresence initial={false}>
+                                        {activeCategory === category && (
+                                            <motion.ul
+                                            key="sub-sub-menu"
+                                            initial={{ opacity: 0, height: 0 }}
+                                            animate={{ opacity: 1, height: "auto" }}
+                                            exit={{ opacity: 0, height: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className=" mt-1 text-sm text-gray-600 flex flex-col overflow-hidden"
+                                            >
+                                            {items.map((item, k) => (
+                                                <li key={k}>
+                                                <a
+                                                    href="#"
+                                                    className="hover:text-primary block transition-colors"
+                                                >
+                                                    {item}
+                                                </a>
+                                                </li>
+                                            ))}
+                                            </motion.ul>
+                                        )}
+                                        </AnimatePresence>
+                                    </li>
+                                    ))}
+                                </motion.ul>
+                                )}
+                            </AnimatePresence>
+                            </li>
                         ))}
                     </ul>
 
@@ -102,7 +190,7 @@ const MobileMenu = () => {
                             <li
                             key={index}
                             className={clsx(
-                                "flex items-center gap-2 text-gray-700 hover:text-orange-500 transition-all duration-500 ease-in-out",
+                                "flex items-center gap-2 text-gray-700 hover:text-primary font-bold transition-all duration-500 ease-in-out",
                                 isOpen ? `delay-${index * 100}` : "delay-0"
                             )}
                             >
