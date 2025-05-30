@@ -41,8 +41,6 @@ const MobileMenu = () => {
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
-    const menuItemsLeft = ['مردانه', 'زنانه', 'بچگانه' , 'لوازم ورزشی' , 'شیکر و جاگ']
-
     const menuItemsRight = {
     title : ['جدیترین محصولات', 'تخفیفات ویژه' , 'پرفروش ترین ها'],
     icons: [HiOutlineStar ,TiFlashOutline ,FaAward]

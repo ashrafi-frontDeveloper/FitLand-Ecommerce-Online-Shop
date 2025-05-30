@@ -45,12 +45,12 @@ const LoginForm = () => {
   };
 
   return (
-    <form className="space-y-4 border-s-Neutral868686 shadow-2xl rounded-xl p-4" onSubmit={handleSubmit}>
+    <form className="space-y-4 border-s-Neutral868686 text-white shadow-2xl rounded-xl p-4" onSubmit={handleSubmit}>
       <Input
         label="لطفا شماره موبایل یا ایمیل خود را وارد کنید"
         type="text"
         name="login"
-        placeholder="Example@gmail.com یا *********09"
+        placeholder="Example@gmail.com یا ******09"
         value={userInput}
         onChange={handleChange}
         isValid={isValid}
