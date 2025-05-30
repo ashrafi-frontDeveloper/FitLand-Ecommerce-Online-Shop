@@ -19,7 +19,7 @@ const Input = ({
       : "border-red-500";
 
   return (
-    <div className="flex flex-col text-right relative">
+    <div className="flex flex-col text-right relative text-white">
       {label && <label className="text-sm mb-1">{label}</label>}
       <div className="relative">
         <input
@@ -28,7 +28,7 @@ const Input = ({
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          className={`p-2 mt-2 rounded-lg border ${borderColor} outline-none w-full text-sm`}
+          className={`p-2 text-white mt-2 rounded-lg border ${borderColor} outline-none w-full text-sm`}
         />
         {value && (
           <IoIosClose
@@ -39,7 +39,7 @@ const Input = ({
         )}
       </div>
       {isValid === false && (
-        <span className="text-red-500 text-sm mt-1">{errorMessage}</span>
+        <span className="text-red-800 text-sm mt-1">{errorMessage}</span>
       )}
     </div>
   );
