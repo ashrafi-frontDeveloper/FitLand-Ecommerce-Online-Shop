@@ -10,7 +10,9 @@ import { toPersianDigits } from "../../utils/ConvertToPersian";
 import { FaAward } from "react-icons/fa6";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
+import { RiUserLine } from "react-icons/ri";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 const subMenus = {
   "مردانه": {
@@ -197,7 +199,13 @@ const MobileMenu = () => {
                             </li>
                         );
                         })}
+                        {/* login & sign up btn */}
+                        <Link to="/login" className="flex items-center gap-x-1 font-bold cursor-pointer hover:shadow-[0_4px_14px_rgba(0,0,0,0.01),0_-4px_16px_rgba(0,0,0,0.01),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] rounded-xl p-3 transition-all duration-350">
+                        <RiUserLine className="w-5 h-5" />
+                        <span>ثبت نام | ورود</span>
+                        </Link>
                     </ul>
+
                 </nav>
             </div>
 

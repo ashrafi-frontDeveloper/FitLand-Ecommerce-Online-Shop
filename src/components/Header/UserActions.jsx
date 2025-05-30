@@ -2,6 +2,7 @@ import { CiSearch } from "react-icons/ci";
 import { RiUserLine } from "react-icons/ri";
 import { toPersianDigits } from "../../utils/ConvertToPersian";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const UserActions = () => {
   
@@ -15,10 +16,10 @@ const UserActions = () => {
 
         <div className="flex gap-x-3.5">
           {/* login & sign up btn */}
-          <a href="/login" className="flex items-center gap-x-1 font-bold cursor-pointer hover:shadow-[0_4px_14px_rgba(0,0,0,0.01),0_-4px_16px_rgba(0,0,0,0.01),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] rounded-xl p-3 transition-all duration-350">
+          <Link to="/login" className="flex items-center gap-x-1 font-bold cursor-pointer hover:shadow-[0_4px_14px_rgba(0,0,0,0.01),0_-4px_16px_rgba(0,0,0,0.01),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] rounded-xl p-3 transition-all duration-350">
             <span>ثبت نام | ورود</span>
             <RiUserLine className="w-5 h-5" />
-          </a>
+          </Link>
 
           {/* shopping cart */}
           <button className="z-40 relative w-12 h-12 flex items-center cursor-pointer justify-center rounded-xl bg-primary text-white hover:shadow-[0_4px_14px_rgba(0,0,0,0.1),0_-4px_16px_rgba(0,0,0,0.1),4px_0_16px_rgba(0,0,0,0.01),-4px_0_16px_rgba(0,0,0,0.1)] transition-all duration-350">
