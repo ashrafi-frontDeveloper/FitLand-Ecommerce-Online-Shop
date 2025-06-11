@@ -7,7 +7,6 @@ const AuthWrapper = ({ title, children }) => {
     <div className="relative flex flex-col items-center justify-center h-dvh py-20 px-10 md:px-20 overflow-hidden bg-gradient-to-br from-[#1F1C2C] via-[#928DAB] to-[#1F1C2C]">
         {/* افکت نوری سه‌بعدی */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-pink-500 opacity-20 rounded-full blur-3xl animate-pulse"></div>
-        
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-indigo-500 opacity-20 rounded-full blur-3xl animate-pulse"></div>
         {/* محتوا */}
           <div className="flex flex-col items-center justify-center w-auto wl:w-1/2 2xl:w-1/3 rounded-4xl shadow-2xl py-20 px-10 md:px-20 bg-secondery-700/15">
