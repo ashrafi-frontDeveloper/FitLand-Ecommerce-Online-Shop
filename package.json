@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://github.com/ashrafi-frontDeveloper/FitLand-Ecommerce-Online-Shop.git"
+
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
