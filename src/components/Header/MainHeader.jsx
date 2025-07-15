@@ -76,8 +76,8 @@ const MainHeader = () => {
                 {/* section center => image */}
                 <div className="mt-5 relative z-20">
                     {/* z-30 */}
-                    <img src="images/run.png" alt="" className="hidden cover sm:block w-96 xl:w[422px] h-96 xl:h-[475px]" />
-                    <img src="images/runMb.png" alt="" className="block sm:hidden h-[150px] w-[130px]" />
+                    <img src="/images/run.png" alt="" className="hidden cover sm:block w-96 xl:w[422px] h-96 xl:h-[475px]" />
+                    <img src="/images/runMb.png" alt="" className="block sm:hidden h-[150px] w-[130px]" />
                 </div>
                 {/* section left => information */}
                 <div className="hidden sm:flex flex-col gap-y-3.5 xl:gap-y-6 mt-16 xl:mt-20 mr-20">
